@@ -16,24 +16,12 @@ export default function Navbar({ activeSection, setActiveSection }) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Prevent background scroll when mobile menu is open
-  useEffect(() => {
-    if (mobileMenuOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
-    }
-    return () => {
-      document.body.style.overflow = '';
-    };
-  }, [mobileMenuOpen]);
-
   const navLinks = [
-    { name: 'Services', href: '#services', id: 'services' },
-    { name: 'Work', href: '#portfolio', id: 'portfolio' },
-    { name: 'About', href: '#about', id: 'about' },
-    { name: 'FAQ', href: '#faq', id: 'faq' },
-    { name: 'Contact', href: '#contact', id: 'contact' },
+    { name: 'Services', href: '#services', id: 'services', icon: 'lucide:briefcase' },
+    { name: 'Work', href: '#portfolio', id: 'portfolio', icon: 'lucide:folder-git-2' },
+    { name: 'About', href: '#about', id: 'about', icon: 'lucide:user-check' },
+    { name: 'FAQ', href: '#faq', id: 'faq', icon: 'lucide:help-circle' },
+    { name: 'Contact', href: '#contact', id: 'contact', icon: 'lucide:send' },
   ];
 
   const handleNavClick = (id) => {
@@ -47,8 +35,8 @@ export default function Navbar({ activeSection, setActiveSection }) {
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled 
-        ? 'py-2.5 sm:py-3.5 bg-[#0a0c10]/95 backdrop-blur-2xl border-b border-white/[0.08] shadow-md' 
+      isScrolled || mobileMenuOpen
+        ? 'py-2.5 sm:py-3.5 bg-[#0a0c10]/95 backdrop-blur-2xl border-b border-white/[0.08] shadow-2xl' 
         : 'py-3.5 sm:py-5 bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -63,11 +51,11 @@ export default function Navbar({ activeSection, setActiveSection }) {
               handleNavClick('home');
             }}
           >
-            <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-white/[0.06] border border-white/10 flex items-center justify-center font-display font-extrabold text-white text-xs sm:text-sm group-hover:border-[#d4ff00]/50 group-hover:text-[#d4ff00] transition-colors">
+            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-2xl bg-white/[0.06] border border-white/10 flex items-center justify-center font-display font-extrabold text-white text-sm group-hover:border-[#d4ff00]/50 group-hover:text-[#d4ff00] transition-colors">
               CT
             </div>
             <div className="flex flex-col">
-              <span className="font-display font-bold text-white text-sm sm:text-base tracking-tight group-hover:text-slate-200 transition-colors">
+              <span className="font-display font-bold text-white text-base sm:text-lg tracking-tight group-hover:text-slate-200 transition-colors">
                 Calvin Tucker
               </span>
               <span className="text-[10px] sm:text-[11px] text-slate-400 font-mono leading-none">
@@ -118,74 +106,88 @@ export default function Navbar({ activeSection, setActiveSection }) {
             </a>
           </div>
 
-          {/* Mobile Right Controls */}
-          <div className="flex items-center gap-2 md:hidden">
+          {/* Mobile Right Controls: Prominent Large Hamburger Button */}
+          <div className="flex items-center gap-2.5 md:hidden">
             <a
               href={UPWORK_URL}
               target="_blank"
               rel="noreferrer"
-              className="px-3 py-1.5 rounded-lg text-xs font-bold btn-lime flex items-center gap-1.5"
+              className="px-3.5 py-2 rounded-xl text-xs font-bold btn-lime flex items-center gap-1.5 shadow-md"
             >
-              <Icon icon="simple-icons:upwork" className="w-3 h-3" />
+              <Icon icon="simple-icons:upwork" className="w-3.5 h-3.5" />
               <span>Upwork</span>
             </a>
 
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-xl bg-white/[0.06] border border-white/10 text-slate-200 hover:text-white focus:outline-none active:scale-95 transition-all"
-              aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+              className={`w-11 h-11 flex items-center justify-center rounded-2xl border transition-all active:scale-95 focus:outline-none ${
+                mobileMenuOpen 
+                  ? 'bg-[#d4ff00] text-[#0a0c10] border-[#d4ff00] shadow-lime-glow' 
+                  : 'bg-white/[0.08] hover:bg-white/[0.14] text-white border-white/15'
+              }`}
+              aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
               aria-expanded={mobileMenuOpen}
             >
-              <Icon icon={mobileMenuOpen ? "lucide:x" : "lucide:menu"} className="w-5 h-5" />
+              <Icon 
+                icon={mobileMenuOpen ? "lucide:x" : "lucide:menu"} 
+                className="w-6 h-6 transition-transform duration-200" 
+              />
             </button>
           </div>
 
         </div>
       </div>
 
-      {/* Mobile Drawer Overlay */}
-      {mobileMenuOpen && (
-        <div className="fixed inset-x-0 top-[57px] bottom-0 bg-[#0a0c10]/98 backdrop-blur-3xl border-b border-white/[0.08] px-5 py-6 flex flex-col justify-between overflow-y-auto md:hidden animate-fadeIn z-50">
+      {/* Sleek Mobile Slide-Down Dropdown Menu */}
+      <div 
+        className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+          mobileMenuOpen 
+            ? 'max-h-[500px] opacity-100 border-t border-white/[0.08] mt-2.5 bg-[#0a0c10]/98 backdrop-blur-2xl shadow-2xl' 
+            : 'max-h-0 opacity-0 pointer-events-none'
+        }`}
+      >
+        <div className="px-4 py-4 space-y-2 max-w-7xl mx-auto">
           
-          <div className="flex flex-col gap-2">
-            <div className="text-[11px] font-mono uppercase tracking-wider text-slate-500 mb-2 px-2">
-              Navigation Menu
-            </div>
-            
+          <div className="text-[10px] font-mono uppercase tracking-wider text-slate-500 mb-1 px-3">
+            Section Jump Menu
+          </div>
+
+          {/* Section Link Rows */}
+          <div className="grid grid-cols-1 gap-1.5">
             {navLinks.map((link) => {
               const isActive = activeSection === link.id;
               return (
                 <button
                   key={link.id}
                   onClick={() => handleNavClick(link.id)}
-                  className={`w-full flex items-center justify-between px-4 py-3.5 rounded-2xl text-left text-base font-semibold transition-all ${
+                  className={`w-full flex items-center justify-between px-4 py-3 rounded-2xl text-left text-sm font-semibold transition-all ${
                     isActive
-                      ? 'bg-white/10 text-[#d4ff00] border border-white/15'
+                      ? 'bg-white/10 text-[#d4ff00] border border-white/15 shadow-sm'
                       : 'text-slate-300 hover:text-white hover:bg-white/[0.04]'
                   }`}
                 >
-                  <span>{link.name}</span>
-                  <Icon icon="lucide:chevron-right" className={`w-4 h-4 ${isActive ? 'text-[#d4ff00]' : 'text-slate-600'}`} />
+                  <div className="flex items-center gap-3">
+                    <div className={`w-8 h-8 rounded-xl flex items-center justify-center ${
+                      isActive ? 'bg-[#d4ff00]/20 text-[#d4ff00]' : 'bg-white/[0.05] text-slate-400'
+                    }`}>
+                      <Icon icon={link.icon} className="w-4 h-4" />
+                    </div>
+                    <span>{link.name}</span>
+                  </div>
+                  <Icon icon="lucide:arrow-down-right" className={`w-4 h-4 ${isActive ? 'text-[#d4ff00]' : 'text-slate-600'}`} />
                 </button>
               );
             })}
           </div>
 
-          <div className="pt-6 border-t border-white/[0.08] space-y-3">
-            <div className="flex items-center justify-center gap-2 py-1 text-emerald-400 text-xs font-mono">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-80"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-              </span>
-              <span>Available for Freelance Contracts</span>
-            </div>
-
-            <div className="grid grid-cols-2 gap-2.5">
+          {/* Quick Platform Actions */}
+          <div className="pt-3 border-t border-white/[0.08] space-y-2.5">
+            <div className="grid grid-cols-2 gap-2">
               <a
                 href={UPWORK_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="py-3 px-3 rounded-xl text-center text-xs font-bold btn-lime flex items-center justify-center gap-1.5"
+                className="py-2.5 px-3 rounded-xl text-center text-xs font-bold btn-lime flex items-center justify-center gap-1.5"
               >
                 <Icon icon="simple-icons:upwork" className="w-3.5 h-3.5" />
                 <span>Upwork Profile</span>
@@ -195,7 +197,7 @@ export default function Navbar({ activeSection, setActiveSection }) {
                 href={FIVERR_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="py-3 px-3 rounded-xl text-center text-xs font-semibold bg-white/[0.06] text-emerald-400 border border-emerald-500/30 flex items-center justify-center gap-1.5"
+                className="py-2.5 px-3 rounded-xl text-center text-xs font-semibold bg-white/[0.06] text-emerald-400 border border-emerald-500/30 flex items-center justify-center gap-1.5"
               >
                 <Icon icon="simple-icons:fiverr" className="w-3.5 h-3.5" />
                 <span>Fiverr Gigs</span>
@@ -204,7 +206,8 @@ export default function Navbar({ activeSection, setActiveSection }) {
           </div>
 
         </div>
-      )}
+      </div>
+
     </header>
   );
 }
