@@ -1,11 +1,11 @@
 export const skillsData = {
-  ai_accelerated: [
-    { name: "Claude (Anthropic)", level: "Advanced Workflow", icon: "simple-icons:anthropic" },
-    { name: "Google Antigravity", level: "Agentic Engineering", icon: "lucide:sparkles" },
-    { name: "Accelerated AI Workflows", level: "Expert Velocity", icon: "lucide:zap" },
-    { name: "Agentic Pair Programming", level: "Expert", icon: "lucide:bot" },
-    { name: "Automated Testing & Refactoring", level: "Proficient", icon: "lucide:check-check" },
-    { name: "Rapid MVP Prototyping", level: "Fast Delivery", icon: "lucide:rocket" },
+  ai_integration: [
+    { name: "Claude (Anthropic)", level: "Proficient", icon: "simple-icons:anthropic" },
+    { name: "Google Antigravity", level: "Proficient", icon: "lucide:sparkles" },
+    { name: "AI Website Integration", level: "Productive Tools", icon: "lucide:bot" },
+    { name: "LLM & API Integrations", level: "Proficient", icon: "lucide:cpu" },
+    { name: "Intelligent Workflows", level: "Proficient", icon: "lucide:workflow" },
+    { name: "Smart Search & Chat", level: "Proficient", icon: "lucide:message-square" },
   ],
   frontend: [
     { name: "React.js", level: "Proficient", icon: "logos:react" },
@@ -46,9 +46,9 @@ export const skillsData = {
 
 export const freelanceGuarantees = [
   {
-    title: "Accelerated AI Turnaround",
-    description: "Leveraging Claude and Antigravity agentic workflows to deliver features 3x–5x faster without sacrificing code quality.",
-    icon: "lucide:zap"
+    title: "100% On-Time Milestones",
+    description: "Strict adherence to agreed deadlines with transparent daily communication and progress updates.",
+    icon: "lucide:clock"
   },
   {
     title: "Clean, Maintainable Code",
@@ -56,9 +56,9 @@ export const freelanceGuarantees = [
     icon: "lucide:code"
   },
   {
-    title: "Upwork & Fiverr Escrow",
-    description: "Complete payment protection with milestone releases upon your approval.",
-    icon: "lucide:shield-check"
+    title: "Productive AI Integration",
+    description: "Seamlessly adding practical AI capabilities using Claude and Antigravity to enhance your web application.",
+    icon: "lucide:sparkles"
   },
   {
     title: "Post-Launch Walkthrough",

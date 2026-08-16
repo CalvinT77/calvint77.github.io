@@ -1,5 +1,6 @@
 import React from 'react';
 import { Icon } from '@iconify/react';
+import portraitImg from '../assets/calvin-portrait.jpg';
 
 export default function Hero() {
   const UPWORK_URL = "https://www.upwork.com/freelancers/~015a281303c61eaf1b?mp_source=share";
@@ -31,7 +32,7 @@ export default function Hero() {
       <div className="relative rounded-3xl overflow-hidden bg-[#12151f] border border-white/[0.08] shadow-2xl">
         <div className="relative aspect-[3/4] overflow-hidden bg-[#0a0c10]">
           <img
-            src="./calvin-portrait.jpg"
+            src={portraitImg}
             alt="Calvin Tucker - Full Stack Web Developer"
             className="w-full h-full object-cover object-center filter brightness-100 contrast-105"
             loading="eager"
@@ -44,10 +45,10 @@ export default function Hero() {
           <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 p-3 sm:p-3.5 rounded-2xl bg-[#0a0c10]/90 backdrop-blur-xl border border-white/10 flex items-center justify-between">
             <div className="flex items-center gap-2.5 sm:gap-3 overflow-hidden">
               <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-[#d4ff00] flex-shrink-0">
-                <Icon icon="lucide:zap" className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                <Icon icon="lucide:bot" className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
               </div>
               <div className="overflow-hidden">
-                <div className="text-[11px] sm:text-xs font-bold text-white truncate">Accelerated Web Dev</div>
+                <div className="text-[11px] sm:text-xs font-bold text-white truncate">Full-Stack & AI Web Dev</div>
                 <div className="text-[9px] sm:text-[10px] text-slate-400 font-mono truncate">FARM • Claude • Antigravity • SQL</div>
               </div>
             </div>
@@ -88,14 +89,14 @@ export default function Hero() {
               </div>
 
               <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#d4ff00]/10 border border-[#d4ff00]/25 text-[11px] sm:text-xs font-mono text-[#d4ff00]">
-                <Icon icon="lucide:zap" className="w-3.5 h-3.5 text-[#d4ff00]" />
-                <span>Accelerated AI Workflow</span>
+                <Icon icon="lucide:bot" className="w-3.5 h-3.5 text-[#d4ff00]" />
+                <span>Claude & Antigravity AI</span>
               </div>
             </div>
 
             {/* Headline */}
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-display font-extrabold tracking-tight text-white leading-[1.12] mb-4 sm:mb-6">
-              Building high-performance <span className="text-[#d4ff00]">full-stack web apps</span> at accelerated velocity.
+              Building high-performance <span className="text-[#d4ff00]">full-stack web apps</span> and productive AI solutions.
             </h1>
 
             {/* Mobile Portrait (Positioned right under headline and above "I'm Calvin Tucker" on mobile) */}
@@ -105,7 +106,7 @@ export default function Hero() {
 
             {/* Subheading */}
             <p className="text-sm sm:text-base lg:text-lg text-slate-400 leading-relaxed mb-6 sm:mb-8 max-w-2xl font-sans">
-              I'm <span className="text-white font-semibold">Calvin Tucker</span>, a freelance software engineer with a B.S. in Computer Science. I combine deep engineering in <strong className="text-slate-200">FARM (FastAPI / React / PostgreSQL)</strong> and <strong className="text-slate-200">MERN</strong> with high-speed <strong className="text-[#d4ff00]">Claude & Antigravity AI workflows</strong> to ship robust software 3x–5x faster.
+              I'm <span className="text-white font-semibold">Calvin Tucker</span>, a freelance software engineer with a B.S. in Computer Science. I architect modern applications using <strong className="text-slate-200">FARM (FastAPI / React / PostgreSQL)</strong> and <strong className="text-slate-200">MERN</strong>, build with <strong className="text-[#d4ff00]">Claude & Antigravity</strong>, and integrate <strong className="text-slate-200">productive AI capabilities</strong> directly into web platforms.
             </p>
 
             {/* Core Pillars */}
@@ -116,7 +117,7 @@ export default function Hero() {
               </div>
               <div className="p-3 sm:p-3.5 rounded-2xl bg-white/[0.03] border border-white/[0.06]">
                 <div className="text-[11px] sm:text-xs font-mono text-[#d4ff00] font-bold mb-0.5 sm:mb-1">02. CLAUDE & AGY</div>
-                <div className="text-xs text-slate-300">Accelerated agentic development</div>
+                <div className="text-xs text-slate-300">Practical AI web integrations</div>
               </div>
               <div className="p-3 sm:p-3.5 rounded-2xl bg-white/[0.03] border border-white/[0.06]">
                 <div className="text-[11px] sm:text-xs font-mono text-[#d4ff00] font-bold mb-0.5 sm:mb-1">03. UPWORK ESCROW</div>
@@ -189,7 +190,7 @@ export default function Hero() {
         {/* Tech Stack Ribbon */}
         <div className="mt-12 sm:mt-16 pt-6 sm:pt-8 border-t border-white/[0.06]">
           <p className="text-center text-[10px] sm:text-xs font-mono uppercase tracking-widest text-slate-500 mb-4 sm:mb-6">
-            Core Development Stack & Accelerated AI Tooling
+            Core Development Stack & AI Tooling
           </p>
           <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 lg:gap-4">
             {techLogos.map((tech) => (

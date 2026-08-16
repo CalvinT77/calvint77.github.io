@@ -3,12 +3,12 @@ import { Icon } from '@iconify/react';
 import { skillsData, freelanceGuarantees } from '../data/skillsData';
 
 export default function About() {
-  const [activeSkillCategory, setActiveSkillCategory] = useState('ai_accelerated');
+  const [activeSkillCategory, setActiveSkillCategory] = useState('ai_integration');
 
   const UPWORK_URL = "https://www.upwork.com/freelancers/~015a281303c61eaf1b?mp_source=share";
 
   const skillTabs = [
-    { key: 'ai_accelerated', label: 'AI & Accelerated', icon: 'lucide:zap' },
+    { key: 'ai_integration', label: 'AI & Smart Tools', icon: 'lucide:bot' },
     { key: 'frontend', label: 'Front-End', icon: 'lucide:layout' },
     { key: 'backend', label: 'Back-End & APIs', icon: 'lucide:server' },
     { key: 'databases', label: 'Databases & SQL', icon: 'lucide:database' },
@@ -29,7 +29,7 @@ export default function About() {
             About <span className="text-[#d4ff00]">Calvin Tucker</span>
           </h2>
           <p className="text-slate-400 text-sm sm:text-base lg:text-lg">
-            Computer Science graduate combining FARM stack, modern React, and high-velocity <strong className="text-white font-semibold">Claude & Antigravity</strong> accelerated development workflows.
+            Computer Science graduate specializing in FARM stack, modern React, <strong className="text-white font-semibold">Claude & Antigravity</strong>, and practical AI web integrations.
           </p>
         </div>
 
@@ -43,20 +43,20 @@ export default function About() {
                 <Icon icon="lucide:terminal" className="w-4 h-4 sm:w-5 sm:h-5" />
               </div>
               <div>
-                <h3 className="text-lg sm:text-xl font-display font-bold text-white">Background & Accelerated Approach</h3>
-                <span className="text-[11px] sm:text-xs font-mono text-[#d4ff00]">B.S. in Computer Science • AI-Assisted Full-Stack Engineer</span>
+                <h3 className="text-lg sm:text-xl font-display font-bold text-white">Background & Approach</h3>
+                <span className="text-[11px] sm:text-xs font-mono text-[#d4ff00]">B.S. in Computer Science • Full-Stack & AI Web Developer</span>
               </div>
             </div>
 
             <div className="space-y-3.5 sm:space-y-4 text-slate-300 text-xs sm:text-sm md:text-base leading-relaxed">
               <p>
-                My programming journey began in high school building games in C# with Unity, creating custom management software, and discovering the thrill of architecting complex interactive systems.
+                My programming journey started back in high school building games in C# with Unity, developing custom game management UIs, and falling in love with turning complex logic into interactive software.
               </p>
               <p>
-                Earning my <strong className="text-white">Bachelor's Degree in Computer Science</strong> grounded me in core software engineering, data structures, relational database schemas (<strong className="text-white">PostgreSQL & SQL</strong>), and modern web stacks like <strong className="text-[#d4ff00]">FastAPI (FARM Stack)</strong> and <strong className="text-[#d4ff00]">React / Node.js (MERN)</strong>.
+                Completing my <strong className="text-white">Bachelor's Degree in Computer Science</strong> solidified my engineering fundamentals across algorithms, software architecture, relational databases (<strong className="text-white">PostgreSQL & SQL</strong>), and modern web frameworks like <strong className="text-[#d4ff00]">FastAPI (FARM Stack)</strong> and <strong className="text-[#d4ff00]">React / Node.js (MERN)</strong>.
               </p>
               <p>
-                Today, I supercharge my freelance workflow on <strong className="text-[#d4ff00]">Upwork and Fiverr</strong> using advanced agentic AI systems like <strong className="text-white">Claude</strong> and <strong className="text-white">Google Antigravity</strong>. This allows me to prototype, build, refactor, and stress-test production code at 3x–5x standard speed while maintaining strict architectural rigor and human craftsmanship.
+                On <strong className="text-[#d4ff00]">Upwork and Fiverr</strong>, I build complete web applications and implement <strong className="text-white">practical, productive AI features</strong> using tools like <strong className="text-white">Claude</strong> and <strong className="text-white">Google Antigravity</strong>—delivering smart search, intelligent assistants, and automated workflows that create genuine business value.
               </p>
             </div>
 
@@ -68,15 +68,15 @@ export default function About() {
               </div>
               <div className="p-2.5 sm:p-3 rounded-xl bg-[#0a0c10]/60 border border-white/[0.04]">
                 <div className="text-sm sm:text-base font-bold text-[#d4ff00] font-mono">Claude / AGY</div>
-                <div className="text-[9px] sm:text-[10px] text-slate-500 uppercase tracking-wider">AI Workflow</div>
+                <div className="text-[9px] sm:text-[10px] text-slate-500 uppercase tracking-wider">AI Tools</div>
               </div>
               <div className="p-2.5 sm:p-3 rounded-xl bg-[#0a0c10]/60 border border-white/[0.04]">
                 <div className="text-sm sm:text-base font-bold text-white font-mono">FARM / MERN</div>
                 <div className="text-[9px] sm:text-[10px] text-slate-500 uppercase tracking-wider">Stacks</div>
               </div>
               <div className="p-2.5 sm:p-3 rounded-xl bg-[#0a0c10]/60 border border-white/[0.04]">
-                <div className="text-sm sm:text-base font-bold text-emerald-400 font-mono">3x–5x</div>
-                <div className="text-[9px] sm:text-[10px] text-slate-500 uppercase tracking-wider">Speed Delivery</div>
+                <div className="text-sm sm:text-base font-bold text-emerald-400 font-mono">AI Enabled</div>
+                <div className="text-[9px] sm:text-[10px] text-slate-500 uppercase tracking-wider">Web Apps</div>
               </div>
             </div>
 
@@ -88,17 +88,17 @@ export default function About() {
             <div className="bespoke-card p-6 sm:p-8 space-y-4 sm:space-y-5">
               <div className="flex items-center gap-3 pb-3 border-b border-white/[0.06]">
                 <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-white/[0.05] border border-white/10 text-white flex items-center justify-center flex-shrink-0">
-                  <Icon icon="lucide:zap" className="w-4 h-4 sm:w-5 sm:h-5 text-[#d4ff00]" />
+                  <Icon icon="lucide:bot" className="w-4 h-4 sm:w-5 sm:h-5 text-[#d4ff00]" />
                 </div>
-                <h3 className="text-base sm:text-lg font-display font-bold text-white">Accelerated Engineering Edge</h3>
+                <h3 className="text-base sm:text-lg font-display font-bold text-white">AI & Engineering Capabilities</h3>
               </div>
 
               <div className="space-y-3.5 sm:space-y-4 text-xs sm:text-sm text-slate-300 leading-relaxed">
                 <div className="flex items-start gap-2.5 sm:gap-3">
                   <Icon icon="simple-icons:anthropic" className="w-4 h-4 sm:w-5 sm:h-5 text-[#d4ff00] flex-shrink-0 mt-0.5" />
                   <div>
-                    <strong className="text-white block font-medium">Claude & Antigravity Mastery:</strong>
-                    Deep context orchestration and agentic pair programming allow rapid API scaffolding, instant bug hunting, and clean code generation.
+                    <strong className="text-white block font-medium">Claude & Antigravity Proficiency:</strong>
+                    Experience using Claude and Antigravity to build productive web integrations, agentic workflows, and structured LLM pipelines.
                   </div>
                 </div>
 
@@ -106,15 +106,15 @@ export default function About() {
                   <Icon icon="lucide:cpu" className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-400 flex-shrink-0 mt-0.5" />
                   <div>
                     <strong className="text-white block font-medium">Hardware & Systems Optimization:</strong>
-                    Custom PC building since age 12 gives me a grounded appreciation for compute speed, cache efficiency, and server resource allocation.
+                    Custom PC building since age 12 gives me a grounded appreciation for compute efficiency, server architecture, and performance tuning.
                   </div>
                 </div>
 
                 <div className="flex items-start gap-2.5 sm:gap-3">
                   <Icon icon="lucide:database" className="w-4 h-4 sm:w-5 sm:h-5 text-purple-400 flex-shrink-0 mt-0.5" />
                   <div>
-                    <strong className="text-white block font-medium">Fast Python & Relational SQL:</strong>
-                    Architecting high-throughput asynchronous backends with FastAPI and structured PostgreSQL databases.
+                    <strong className="text-white block font-medium">FastAPI & Relational PostgreSQL:</strong>
+                    Architecting high-speed Python backends with typed Pydantic models and structured relational schemas in PostgreSQL.
                   </div>
                 </div>
               </div>
@@ -122,8 +122,8 @@ export default function About() {
 
             {/* Quick Freelance Badge */}
             <div className="bespoke-card p-5 sm:p-6 text-center">
-              <span className="text-xs font-mono text-[#d4ff00] uppercase font-bold block mb-1">Looking for a High-Velocity Developer?</span>
-              <p className="text-xs text-slate-400 mb-3 sm:mb-4">Get your web app or API shipped faster with modern AI-accelerated workflows.</p>
+              <span className="text-xs font-mono text-[#d4ff00] uppercase font-bold block mb-1">Looking for a Freelance Partner?</span>
+              <p className="text-xs text-slate-400 mb-3 sm:mb-4">I treat every client project with the highest level of craftsmanship and communication.</p>
               <a
                 href={UPWORK_URL}
                 target="_blank"
@@ -143,8 +143,8 @@ export default function About() {
         <div className="bespoke-card p-6 sm:p-8 lg:p-12 mb-12 sm:mb-16">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 sm:gap-6 mb-6 sm:mb-8 pb-5 sm:pb-6 border-b border-white/[0.06]">
             <div>
-              <h3 className="text-xl sm:text-2xl font-display font-bold text-white">Technical Arsenal & AI Workflows</h3>
-              <p className="text-[11px] sm:text-xs text-slate-400 font-mono mt-1">Frameworks and agentic tools I use to deliver software at maximum velocity</p>
+              <h3 className="text-xl sm:text-2xl font-display font-bold text-white">Technical Arsenal & AI Skills</h3>
+              <p className="text-[11px] sm:text-xs text-slate-400 font-mono mt-1">Frameworks, databases, and AI tooling I use to build modern software</p>
             </div>
 
             {/* Skill Tabs (Swipeable on mobile) */}

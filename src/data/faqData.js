@@ -4,8 +4,8 @@ export const faqData = [
     answer: "Yes! I am actively available for contracts on both Fiverr and Upwork. Working through these platforms gives you the peace of mind of milestone escrow protection, structured dispute resolution, and clear deliverables."
   },
   {
-    question: "How does your accelerated AI workflow (Claude & Antigravity) benefit my project?",
-    answer: "By integrating cutting-edge agentic workflows with Claude and Google Antigravity, I can architect, develop, test, and iterate on full-stack applications at 3x–5x standard speed. This means faster turnaround for your MVP, lower overhead, and more thorough automated testing, while ensuring every line of code is human-reviewed, typed, and maintainable."
+    question: "How do you implement AI into websites productively?",
+    answer: "I leverage modern AI tools like Claude (Anthropic) and Google Antigravity to build practical, high-utility features into web applications—such as smart assistants, intelligent semantic search, automated content pipelines, and structured API workflows that genuinely improve user experience and business operations."
   },
   {
     question: "What technology stacks do you specialize in?",
@@ -13,7 +13,7 @@ export const faqData = [
   },
   {
     question: "What is your typical turnaround time for a project?",
-    answer: "Turnaround times vary based on scope: landing pages and responsive frontends typically take 2-4 days, while full-stack web applications or custom APIs take 1-2 weeks. With my accelerated workflow, progress is shared daily."
+    answer: "Turnaround times vary based on scope: landing pages and responsive frontends typically take 2-4 days, while full-stack web applications or custom APIs take 1-2 weeks. Progress is communicated with transparency."
   },
   {
     question: "Do you provide post-launch support and revisions?",

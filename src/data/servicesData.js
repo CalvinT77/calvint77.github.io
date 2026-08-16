@@ -3,34 +3,34 @@ export const servicesData = [
     id: "full-stack-apps",
     title: "Full-Stack Web Applications",
     icon: "lucide:layers",
-    tagline: "FARM, MERN & Next.js Accelerated Builds",
-    description: "From architecture to deployment, I engineer complete full-stack web applications using FARM stack (FastAPI, React, MongoDB/Postgres), MERN, or Next.js with secure APIs and cloud databases.",
+    tagline: "FARM, MERN & Next.js End-to-End Apps",
+    description: "From architecture to deployment, I build complete full-stack web applications using FARM stack (FastAPI, React, MongoDB/Postgres), MERN, or Next.js with secure APIs and cloud databases.",
     features: [
       "FARM Stack (FastAPI + React + MongoDB / PostgreSQL)",
       "MERN & Next.js full-stack architectures",
-      "Accelerated delivery via Claude & Antigravity workflows",
       "Relational SQL (PostgreSQL) and NoSQL (MongoDB) schemas",
       "Secure authentication (JWT, OAuth, role-based access)",
-      "Real-time functionality via WebSockets / Socket.io"
+      "Real-time functionality via WebSockets / Socket.io",
+      "Deployment to Vercel, Render, Railway, AWS, or DigitalOcean"
     ],
     idealFor: "SaaS products, web portals, custom booking engines, and dynamic web apps.",
     upworkSkill: "Full Stack Development"
   },
   {
-    id: "accelerated-ai-mvp",
-    title: "Accelerated AI Workflows & MVPs",
-    icon: "lucide:zap",
-    tagline: "10x Velocity with Claude & Antigravity",
-    description: "Harnessing cutting-edge AI-assisted engineering with Claude and Antigravity to rapidly architect, prototype, and build robust software in record time with zero compromise on precision.",
+    id: "ai-website-integration",
+    title: "Productive AI Web Integration",
+    icon: "lucide:bot",
+    tagline: "Claude & Antigravity Powered Web Features",
+    description: "Integrating practical, productive AI capabilities into your web applications to solve real problems—such as intelligent search, smart assistant widgets, automated workflows, and structured LLM API pipelines.",
     features: [
-      "Rapid MVP prototyping and feature implementation",
-      "Automated edge-case coverage and thorough refactoring",
-      "FastAPI & React rapid scaffold and endpoint generation",
-      "Agentic context-aware bug fixing and code optimization",
-      "Continuous integration and accelerated turnaround timelines"
+      "Productive LLM & API integration (Claude, Anthropic, Gemini, OpenAI)",
+      "Google Antigravity tooling and agentic feature development",
+      "Smart search, document processing, and AI chatbots for web apps",
+      "Structured output formatting and schema validation",
+      "User-friendly AI UX/UI interfaces with responsive streaming responses"
     ],
-    idealFor: "Startups and clients looking for rapid prototypes, tight deadlines, or high-velocity development.",
-    upworkSkill: "Accelerated Development"
+    idealFor: "Businesses looking to enhance their web app with practical, useful AI features.",
+    upworkSkill: "AI Integration"
   },
   {
     id: "frontend-ui-ux",
@@ -72,7 +72,7 @@ export const freelanceWorkflow = [
     step: "01",
     title: "Requirements & Scope",
     icon: "lucide:message-square-code",
-    description: "We clarify your exact goals, technical stack (FARM, MERN, Next.js, Postgres), deliverables, and timeline on Upwork, Fiverr, or via email."
+    description: "We clarify your exact goals, technical stack (FARM, MERN, Next.js, Postgres), AI features, deliverables, and timeline on Upwork, Fiverr, or via email."
   },
   {
     step: "02",
@@ -82,9 +82,9 @@ export const freelanceWorkflow = [
   },
   {
     step: "03",
-    title: "Accelerated AI Build",
-    icon: "lucide:zap",
-    description: "Leveraging Claude and Antigravity workflows to write clean, modular, and typed code across frontend and backend at maximum velocity."
+    title: "Full-Stack & AI Build",
+    icon: "lucide:code-2",
+    description: "Writing clean, modular, and typed code across frontend, backend, and productive AI integrations using Claude and Antigravity."
   },
   {
     step: "04",
