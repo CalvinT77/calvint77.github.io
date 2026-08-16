@@ -19,17 +19,17 @@
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
+  from { opacity: 0; transform: translateY(8px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes floatSlow {
   0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-8px); }
+  50% { transform: translateY(-6px); }
 }
 
 .animate-fadeIn {
-  animation: fadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: fadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .animate-float-slow {
@@ -39,6 +39,7 @@
 html {
   color-scheme: dark;
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -52,36 +53,53 @@ body {
   min-height: 100vh;
 }
 
-/* Custom modern scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
+/* Hide scrollbar for swipeable horizontal tabs on mobile */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
 }
-::-webkit-scrollbar-track {
-  background: #0a0c10;
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
-::-webkit-scrollbar-thumb {
-  background: #1e2433;
-  border-radius: 4px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #2d374d;
+
+/* Custom modern scrollbar for desktop */
+@media (min-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0a0c10;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1e2433;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #2d374d;
+  }
 }
 
 /* Subtle Bespoke Card Styles */
 .bespoke-card {
-  background-color: rgba(19, 23, 34, 0.7);
+  background-color: rgba(19, 23, 34, 0.75);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 1.5rem;
+  border-radius: 1.25rem;
   box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media (min-width: 640px) {
+  .bespoke-card {
+    border-radius: 1.5rem;
+  }
 }
 
 .bespoke-card:hover {
-  background-color: rgba(24, 29, 43, 0.85);
+  background-color: rgba(24, 29, 43, 0.88);
   border-color: rgba(255, 255, 255, 0.12);
-  transform: translateY(-3px);
+  transform: translateY(-2px);
 }
 
 /* Lime Highlight Button */
@@ -90,7 +108,7 @@ body {
   color: #0a0c10;
   font-weight: 700;
   box-shadow: 0 0 25px -4px rgba(212, 255, 0, 0.35);
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .btn-lime:hover {
@@ -100,5 +118,5 @@ body {
 }
 
 .btn-lime:active {
-  transform: scale(0.98);
+  transform: scale(0.97);
 }

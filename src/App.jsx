@@ -86,12 +86,12 @@ export default function App() {
       )}
 
       {/* Floating Quick Action Button */}
-      <div className="fixed bottom-6 right-6 z-40">
+      <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40">
         <a
           href={UPWORK_URL}
           target="_blank"
           rel="noreferrer"
-          className="flex items-center gap-2 px-4 py-2.5 rounded-full btn-lime text-xs font-bold shadow-xl hover:scale-105 active:scale-95 transition-all"
+          className="flex items-center gap-2 px-3.5 py-2.5 sm:px-4 sm:py-2.5 rounded-full btn-lime text-xs font-bold shadow-xl hover:scale-105 active:scale-95 transition-all"
         >
           <Icon icon="simple-icons:upwork" className="w-4 h-4" />
           <span className="hidden sm:inline">Hire on Upwork</span>
