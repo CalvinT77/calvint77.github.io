@@ -1,4 +1,12 @@
 export const skillsData = {
+  ai_accelerated: [
+    { name: "Claude (Anthropic)", level: "Advanced Workflow", icon: "simple-icons:anthropic" },
+    { name: "Google Antigravity", level: "Agentic Engineering", icon: "lucide:sparkles" },
+    { name: "Accelerated AI Workflows", level: "Expert Velocity", icon: "lucide:zap" },
+    { name: "Agentic Pair Programming", level: "Expert", icon: "lucide:bot" },
+    { name: "Automated Testing & Refactoring", level: "Proficient", icon: "lucide:check-check" },
+    { name: "Rapid MVP Prototyping", level: "Fast Delivery", icon: "lucide:rocket" },
+  ],
   frontend: [
     { name: "React.js", level: "Proficient", icon: "logos:react" },
     { name: "Next.js", level: "Proficient", icon: "logos:nextjs-icon" },
@@ -38,9 +46,9 @@ export const skillsData = {
 
 export const freelanceGuarantees = [
   {
-    title: "100% On-Time Milestones",
-    description: "Strict adherence to agreed deadlines with transparent daily communication.",
-    icon: "lucide:clock"
+    title: "Accelerated AI Turnaround",
+    description: "Leveraging Claude and Antigravity agentic workflows to deliver features 3x–5x faster without sacrificing code quality.",
+    icon: "lucide:zap"
   },
   {
     title: "Clean, Maintainable Code",

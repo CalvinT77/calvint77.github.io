@@ -4,23 +4,23 @@ export const faqData = [
     answer: "Yes! I am actively available for contracts on both Fiverr and Upwork. Working through these platforms gives you the peace of mind of milestone escrow protection, structured dispute resolution, and clear deliverables."
   },
   {
-    question: "Can you build both the Frontend and Backend together?",
-    answer: "Absolutely. As a full-stack developer, I build end-to-end applications. I handle everything from modern, reactive React/Tailwind user interfaces to secure Node.js/Express backends, authentication systems (JWT/OAuth), and MongoDB/SQL databases."
+    question: "How does your accelerated AI workflow (Claude & Antigravity) benefit my project?",
+    answer: "By integrating cutting-edge agentic workflows with Claude and Google Antigravity, I can architect, develop, test, and iterate on full-stack applications at 3x–5x standard speed. This means faster turnaround for your MVP, lower overhead, and more thorough automated testing, while ensuring every line of code is human-reviewed, typed, and maintainable."
   },
   {
-    question: "What if I only need a Frontend or only an API backend?",
-    answer: "I can work exclusively on frontend UI/UX engineering (converting designs to React/Tailwind, adding interactivity, or optimizing performance) or backend API development (building REST/WebSocket endpoints, database design, or AI bot integrations)."
+    question: "What technology stacks do you specialize in?",
+    answer: "I specialize in the FARM stack (FastAPI, React, MongoDB / PostgreSQL), the MERN stack (MongoDB, Express, React, Node.js), and Next.js full-stack architectures with Tailwind CSS and relational SQL."
   },
   {
-    question: "How does the project revision process work?",
-    answer: "Every freelance gig includes dedicated revision rounds. Before final delivery, you will test and review the live preview on a staging environment. We refine until the project matches your exact expectations."
+    question: "What is your typical turnaround time for a project?",
+    answer: "Turnaround times vary based on scope: landing pages and responsive frontends typically take 2-4 days, while full-stack web applications or custom APIs take 1-2 weeks. With my accelerated workflow, progress is shared daily."
   },
   {
-    question: "Do you assist with hosting and deployment?",
-    answer: "Yes! I will deploy your project to production on platforms such as Vercel, Netlify, Render, Railway, GitHub Pages, or VPS/Cloud providers, and configure your custom domain and environment variables."
+    question: "Do you provide post-launch support and revisions?",
+    answer: "Yes, every contract includes dedicated post-launch support, full source code handover via GitHub, and revisions to ensure everything performs smoothly on your production environment."
   },
   {
-    question: "What is your typical turnaround time?",
-    answer: "Small frontend tasks, landing pages, and bug fixes typically take 2-4 days. Full-stack web applications and custom systems usually range between 1-3 weeks depending on the complexity of features and integrations."
+    question: "How do we get started?",
+    answer: "You can either hire me directly through my Upwork or Fiverr profile links, or fill out the contact form below with your project requirements to receive a fast scoping estimate."
   }
 ];

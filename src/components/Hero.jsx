@@ -9,12 +9,12 @@ export default function Hero() {
     { name: "React.js", icon: "logos:react" },
     { name: "Next.js", icon: "logos:nextjs-icon" },
     { name: "FastAPI", icon: "logos:fastapi" },
+    { name: "Claude (AI)", icon: "simple-icons:anthropic" },
+    { name: "Antigravity", icon: "lucide:sparkles" },
     { name: "Node.js", icon: "logos:nodejs-icon" },
-    { name: "Python", icon: "logos:python" },
     { name: "PostgreSQL", icon: "logos:postgresql" },
     { name: "MongoDB", icon: "logos:mongodb-icon" },
     { name: "Tailwind CSS", icon: "logos:tailwindcss-icon" },
-    { name: "WebSockets", icon: "logos:socket-io" },
   ];
 
   const scrollToServices = () => {
@@ -31,25 +31,32 @@ export default function Hero() {
           {/* Hero Typography & Freelance Proposition */}
           <div className="lg:col-span-7 flex flex-col items-start text-left order-1">
             
-            {/* Status Pill */}
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/[0.08] text-[11px] sm:text-xs font-mono text-slate-300 mb-4 sm:mb-6">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-80"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-              </span>
-              <span className="text-emerald-400 font-semibold">Available for Freelance</span>
-              <span className="text-slate-600">•</span>
-              <span className="text-slate-400">Upwork & Fiverr</span>
+            {/* Status & Workflow Badges */}
+            <div className="flex flex-wrap items-center gap-2 mb-4 sm:mb-6">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/[0.08] text-[11px] sm:text-xs font-mono text-slate-300">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-80"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                </span>
+                <span className="text-emerald-400 font-semibold">Available for Freelance</span>
+                <span className="text-slate-600">•</span>
+                <span className="text-slate-400">Upwork & Fiverr</span>
+              </div>
+
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#d4ff00]/10 border border-[#d4ff00]/25 text-[11px] sm:text-xs font-mono text-[#d4ff00]">
+                <Icon icon="lucide:zap" className="w-3.5 h-3.5 text-[#d4ff00]" />
+                <span>Accelerated AI Workflow</span>
+              </div>
             </div>
 
             {/* Headline */}
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-display font-extrabold tracking-tight text-white leading-[1.12] mb-4 sm:mb-6">
-              Building high-performance <span className="text-[#d4ff00]">full-stack web apps</span> with precision.
+              Building high-performance <span className="text-[#d4ff00]">full-stack web apps</span> at accelerated velocity.
             </h1>
 
             {/* Subheading */}
             <p className="text-sm sm:text-base lg:text-lg text-slate-400 leading-relaxed mb-6 sm:mb-8 max-w-2xl font-sans">
-              I'm <span className="text-white font-semibold">Calvin Tucker</span>, a freelance software engineer with a B.S. in Computer Science. I architect fast React & Next.js frontends, scalable <strong className="text-slate-200">FARM (FastAPI / React / MongoDB / PostgreSQL)</strong> and <strong className="text-slate-200">MERN</strong> backends, and robust full-stack applications.
+              I'm <span className="text-white font-semibold">Calvin Tucker</span>, a freelance software engineer with a B.S. in Computer Science. I combine deep engineering in <strong className="text-slate-200">FARM (FastAPI / React / PostgreSQL)</strong> and <strong className="text-slate-200">MERN</strong> with high-speed <strong className="text-[#d4ff00]">Claude & Antigravity AI workflows</strong> to ship robust software 3x–5x faster.
             </p>
 
             {/* Core Pillars */}
@@ -59,8 +66,8 @@ export default function Hero() {
                 <div className="text-xs text-slate-300">FastAPI, Node, React, PostgreSQL</div>
               </div>
               <div className="p-3 sm:p-3.5 rounded-2xl bg-white/[0.03] border border-white/[0.06]">
-                <div className="text-[11px] sm:text-xs font-mono text-[#d4ff00] font-bold mb-0.5 sm:mb-1">02. PERFORMANCE</div>
-                <div className="text-xs text-slate-300">Clean, typed, scalable architecture</div>
+                <div className="text-[11px] sm:text-xs font-mono text-[#d4ff00] font-bold mb-0.5 sm:mb-1">02. CLAUDE & AGY</div>
+                <div className="text-xs text-slate-300">Accelerated agentic development</div>
               </div>
               <div className="p-3 sm:p-3.5 rounded-2xl bg-white/[0.03] border border-white/[0.06]">
                 <div className="text-[11px] sm:text-xs font-mono text-[#d4ff00] font-bold mb-0.5 sm:mb-1">03. UPWORK ESCROW</div>
@@ -123,7 +130,7 @@ export default function Hero() {
 
           </div>
 
-          {/* Right Column: Calvin's Studio Cutout Portrait */}
+          {/* Right Column: Calvin's Studio Portrait */}
           <div className="lg:col-span-5 flex justify-center lg:justify-end order-2 mt-4 lg:mt-0">
             <div className="relative w-full max-w-[300px] sm:max-w-sm lg:max-w-md mx-auto">
               
@@ -147,11 +154,11 @@ export default function Hero() {
                   <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 p-3 sm:p-3.5 rounded-2xl bg-[#0a0c10]/90 backdrop-blur-xl border border-white/10 flex items-center justify-between">
                     <div className="flex items-center gap-2.5 sm:gap-3 overflow-hidden">
                       <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-[#d4ff00] flex-shrink-0">
-                        <Icon icon="lucide:code-2" className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                        <Icon icon="lucide:zap" className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                       </div>
                       <div className="overflow-hidden">
-                        <div className="text-[11px] sm:text-xs font-bold text-white truncate">Full-Stack Web Dev</div>
-                        <div className="text-[9px] sm:text-[10px] text-slate-400 font-mono truncate">FARM • MERN • Next.js • SQL</div>
+                        <div className="text-[11px] sm:text-xs font-bold text-white truncate">Accelerated Web Dev</div>
+                        <div className="text-[9px] sm:text-[10px] text-slate-400 font-mono truncate">FARM • Claude • Antigravity • SQL</div>
                       </div>
                     </div>
                     <span className="px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-full bg-[#d4ff00]/15 text-[#d4ff00] text-[9px] sm:text-[10px] font-mono font-bold flex-shrink-0">
@@ -175,7 +182,7 @@ export default function Hero() {
         {/* Tech Stack Ribbon */}
         <div className="mt-12 sm:mt-16 pt-6 sm:pt-8 border-t border-white/[0.06]">
           <p className="text-center text-[10px] sm:text-xs font-mono uppercase tracking-widest text-slate-500 mb-4 sm:mb-6">
-            Core Development Stack & Technologies
+            Core Development Stack & Accelerated AI Tooling
           </p>
           <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 lg:gap-4">
             {techLogos.map((tech) => (

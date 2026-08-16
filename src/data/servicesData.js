@@ -3,18 +3,34 @@ export const servicesData = [
     id: "full-stack-apps",
     title: "Full-Stack Web Applications",
     icon: "lucide:layers",
-    tagline: "FARM, MERN & Next.js End-to-End Apps",
-    description: "From architecture to deployment, I build complete full-stack web applications using FARM stack (FastAPI, React, MongoDB/Postgres), MERN, or Next.js with secure APIs and cloud databases.",
+    tagline: "FARM, MERN & Next.js Accelerated Builds",
+    description: "From architecture to deployment, I engineer complete full-stack web applications using FARM stack (FastAPI, React, MongoDB/Postgres), MERN, or Next.js with secure APIs and cloud databases.",
     features: [
       "FARM Stack (FastAPI + React + MongoDB / PostgreSQL)",
       "MERN & Next.js full-stack architectures",
+      "Accelerated delivery via Claude & Antigravity workflows",
       "Relational SQL (PostgreSQL) and NoSQL (MongoDB) schemas",
       "Secure authentication (JWT, OAuth, role-based access)",
-      "Real-time functionality via WebSockets / Socket.io",
-      "Deployment to Vercel, Render, Railway, AWS, or DigitalOcean"
+      "Real-time functionality via WebSockets / Socket.io"
     ],
     idealFor: "SaaS products, web portals, custom booking engines, and dynamic web apps.",
     upworkSkill: "Full Stack Development"
+  },
+  {
+    id: "accelerated-ai-mvp",
+    title: "Accelerated AI Workflows & MVPs",
+    icon: "lucide:zap",
+    tagline: "10x Velocity with Claude & Antigravity",
+    description: "Harnessing cutting-edge AI-assisted engineering with Claude and Antigravity to rapidly architect, prototype, and build robust software in record time with zero compromise on precision.",
+    features: [
+      "Rapid MVP prototyping and feature implementation",
+      "Automated edge-case coverage and thorough refactoring",
+      "FastAPI & React rapid scaffold and endpoint generation",
+      "Agentic context-aware bug fixing and code optimization",
+      "Continuous integration and accelerated turnaround timelines"
+    ],
+    idealFor: "Startups and clients looking for rapid prototypes, tight deadlines, or high-velocity development.",
+    upworkSkill: "Accelerated Development"
   },
   {
     id: "frontend-ui-ux",
@@ -48,22 +64,6 @@ export const servicesData = [
     ],
     idealFor: "High-performance Python/Node APIs, custom microservices, mobile backends, and data pipelines.",
     upworkSkill: "Back-End & API Development"
-  },
-  {
-    id: "redesign-optimization",
-    title: "Web Redesign & Performance",
-    icon: "lucide:zap",
-    tagline: "Modernizing Outdated Codebases",
-    description: "Refactoring legacy codebases, speeding up slow websites, fixing tricky bugs, and refreshing outdated layouts with sleek contemporary UI/UX aesthetics.",
-    features: [
-      "Lighthouse performance optimization (90+ score target)",
-      "Code refactoring and modern component architecture",
-      "Fixing frontend styling bugs & mobile responsiveness glitches",
-      "SEO enhancements and accessibility (a11y) improvements",
-      "Migration from static HTML/jQuery to React or Next.js"
-    ],
-    idealFor: "Existing websites that need a visual makeover, faster load times, or bug resolutions.",
-    upworkSkill: "Website Optimization"
   }
 ];
 
@@ -82,9 +82,9 @@ export const freelanceWorkflow = [
   },
   {
     step: "03",
-    title: "Full-Stack Build",
-    icon: "lucide:code-2",
-    description: "Writing clean, modular, and maintainable code across the frontend, backend (FastAPI / Node), APIs, and database layers."
+    title: "Accelerated AI Build",
+    icon: "lucide:zap",
+    description: "Leveraging Claude and Antigravity workflows to write clean, modular, and typed code across frontend and backend at maximum velocity."
   },
   {
     step: "04",
