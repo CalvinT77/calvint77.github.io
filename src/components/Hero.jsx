@@ -22,6 +22,50 @@ export default function Hero() {
     if (el) el.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const renderPortrait = () => (
+    <div className="relative w-full max-w-[280px] sm:max-w-sm lg:max-w-md mx-auto">
+      {/* Subtle background ambient glow */}
+      <div className="absolute -inset-4 bg-gradient-to-b from-[#d4ff00]/10 via-transparent to-transparent rounded-[2.5rem] blur-2xl pointer-events-none opacity-60"></div>
+
+      {/* Main Image Container */}
+      <div className="relative rounded-3xl overflow-hidden bg-[#12151f] border border-white/[0.08] shadow-2xl">
+        <div className="relative aspect-[3/4] overflow-hidden bg-[#0a0c10]">
+          <img
+            src="./calvin-portrait.jpg"
+            alt="Calvin Tucker - Full Stack Web Developer"
+            className="w-full h-full object-cover object-center filter brightness-100 contrast-105"
+            loading="eager"
+          />
+
+          {/* Gradient Fade */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0d1017] via-transparent to-transparent opacity-90 pointer-events-none"></div>
+
+          {/* Bottom Image Info Pill */}
+          <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 p-3 sm:p-3.5 rounded-2xl bg-[#0a0c10]/90 backdrop-blur-xl border border-white/10 flex items-center justify-between">
+            <div className="flex items-center gap-2.5 sm:gap-3 overflow-hidden">
+              <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-[#d4ff00] flex-shrink-0">
+                <Icon icon="lucide:zap" className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+              </div>
+              <div className="overflow-hidden">
+                <div className="text-[11px] sm:text-xs font-bold text-white truncate">Accelerated Web Dev</div>
+                <div className="text-[9px] sm:text-[10px] text-slate-400 font-mono truncate">FARM • Claude • Antigravity • SQL</div>
+              </div>
+            </div>
+            <span className="px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-full bg-[#d4ff00]/15 text-[#d4ff00] text-[9px] sm:text-[10px] font-mono font-bold flex-shrink-0">
+              PRO
+            </span>
+          </div>
+        </div>
+      </div>
+
+      {/* Floating Stat Badge */}
+      <div className="absolute -top-2.5 -left-2.5 sm:-top-3 sm:-left-3 bg-[#131722]/95 backdrop-blur-xl border border-white/10 rounded-2xl px-3 py-2 sm:px-4 sm:py-2.5 shadow-xl flex items-center gap-2 sm:gap-3">
+        <div className="w-2 h-2 rounded-full bg-[#d4ff00]"></div>
+        <div className="text-[11px] sm:text-xs font-mono font-bold text-white">Direct Freelancer</div>
+      </div>
+    </div>
+  );
+
   return (
     <section id="home" className="relative pt-24 pb-12 sm:pt-32 sm:pb-16 lg:pt-40 lg:pb-24 overflow-hidden">
       
@@ -29,7 +73,7 @@ export default function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 items-center">
           
           {/* Hero Typography & Freelance Proposition */}
-          <div className="lg:col-span-7 flex flex-col items-start text-left order-1">
+          <div className="lg:col-span-7 flex flex-col items-start text-left">
             
             {/* Status & Workflow Badges */}
             <div className="flex flex-wrap items-center gap-2 mb-4 sm:mb-6">
@@ -53,6 +97,11 @@ export default function Hero() {
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-display font-extrabold tracking-tight text-white leading-[1.12] mb-4 sm:mb-6">
               Building high-performance <span className="text-[#d4ff00]">full-stack web apps</span> at accelerated velocity.
             </h1>
+
+            {/* Mobile Portrait (Positioned right under headline and above "I'm Calvin Tucker" on mobile) */}
+            <div className="block lg:hidden w-full my-6">
+              {renderPortrait()}
+            </div>
 
             {/* Subheading */}
             <p className="text-sm sm:text-base lg:text-lg text-slate-400 leading-relaxed mb-6 sm:mb-8 max-w-2xl font-sans">
@@ -130,51 +179,9 @@ export default function Hero() {
 
           </div>
 
-          {/* Right Column: Calvin's Studio Portrait */}
-          <div className="lg:col-span-5 flex justify-center lg:justify-end order-2 mt-4 lg:mt-0">
-            <div className="relative w-full max-w-[300px] sm:max-w-sm lg:max-w-md mx-auto">
-              
-              {/* Subtle background ambient glow */}
-              <div className="absolute -inset-4 bg-gradient-to-b from-[#d4ff00]/10 via-transparent to-transparent rounded-[2.5rem] blur-2xl pointer-events-none opacity-60"></div>
-
-              {/* Main Image Container */}
-              <div className="relative rounded-3xl overflow-hidden bg-[#12151f] border border-white/[0.08] shadow-2xl">
-                <div className="relative aspect-[3/4] overflow-hidden bg-[#0a0c10]">
-                  <img
-                    src="./calvin-portrait.jpg"
-                    alt="Calvin Tucker - Full Stack Web Developer"
-                    className="w-full h-full object-cover object-center filter brightness-100 contrast-105"
-                    loading="eager"
-                  />
-
-                  {/* Gradient Fade */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0d1017] via-transparent to-transparent opacity-90 pointer-events-none"></div>
-
-                  {/* Bottom Image Info Pill */}
-                  <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 p-3 sm:p-3.5 rounded-2xl bg-[#0a0c10]/90 backdrop-blur-xl border border-white/10 flex items-center justify-between">
-                    <div className="flex items-center gap-2.5 sm:gap-3 overflow-hidden">
-                      <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-[#d4ff00] flex-shrink-0">
-                        <Icon icon="lucide:zap" className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-                      </div>
-                      <div className="overflow-hidden">
-                        <div className="text-[11px] sm:text-xs font-bold text-white truncate">Accelerated Web Dev</div>
-                        <div className="text-[9px] sm:text-[10px] text-slate-400 font-mono truncate">FARM • Claude • Antigravity • SQL</div>
-                      </div>
-                    </div>
-                    <span className="px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-full bg-[#d4ff00]/15 text-[#d4ff00] text-[9px] sm:text-[10px] font-mono font-bold flex-shrink-0">
-                      PRO
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Floating Stat Badge */}
-              <div className="absolute -top-2.5 -left-2.5 sm:-top-3 sm:-left-3 bg-[#131722]/95 backdrop-blur-xl border border-white/10 rounded-2xl px-3 py-2 sm:px-4 sm:py-2.5 shadow-xl flex items-center gap-2 sm:gap-3">
-                <div className="w-2 h-2 rounded-full bg-[#d4ff00]"></div>
-                <div className="text-[11px] sm:text-xs font-mono font-bold text-white">Direct Freelancer</div>
-              </div>
-
-            </div>
+          {/* Desktop Right Column: Calvin's Studio Portrait */}
+          <div className="hidden lg:flex lg:col-span-5 justify-end">
+            {renderPortrait()}
           </div>
 
         </div>
